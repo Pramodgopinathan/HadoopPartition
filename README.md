@@ -23,8 +23,5 @@ So all values with same key(cricket) send to same reducer. but since our data co
 
 And also data key (cricket) is also present for other country map output. So we have a lots of key value data to send to same reducer for cricket key. Here we will write our custom partitioner. And follows the approach below.</br></br></br>
 
- 
 
-Our custom partitioner will send all key value by country india to one partition and other key value with countries like(England,Australia) to other partition so that work load one reducer that should process key cricket is divided into two reducers. </br></br>
-
- 
+**Our custom Partitioner class will divide the dataset into three partitions one with key as cricket and value as india, second partition with key as cricket and value other than india, and third partition with game(key) other than cricket 
